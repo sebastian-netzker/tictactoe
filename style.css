@@ -1,0 +1,187 @@
+body {
+    font-family: 'Roboto Slab', serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 70px;
+    background-color: rgba(231, 202, 173, 0.466);
+}
+
+.player-panel {
+    display: flex;
+    font-size: 32px;
+    margin-bottom: 32px;
+}
+
+.player-panel div {
+    display: flex;
+    align-items: center;
+    margin-right: 16px;
+    margin-left: 16px;
+}
+
+.player-panel img {
+    width: 60px;
+    height: 60px;
+    margin-right: 16px;
+}
+
+.player-inactive {
+    opacity: 0.5;
+}
+
+table {
+    border-collapse: collapse;
+    box-shadow: 5px 5px 5px rgb(55, 55, 133);
+}
+
+tr {
+    width: 399px;
+    box-shadow: 5px 5px 5px rgb(55, 55, 133);
+}
+
+td {
+    position: relative;
+    width: 133px;
+    height: 133px;
+    border: 5px solid black;
+    cursor: pointer;
+    box-shadow: 5px 5px 5px rgb(55, 55, 133);
+}
+
+td:hover {
+    background-color: rgba(97, 211, 141, 0.15);
+}
+
+table tr:first-child td {
+    border-top: 0;
+}
+
+tr td:first-child {
+    border-left: 0;
+}
+
+table tr:last-child td {
+    border-bottom: 0;
+}
+
+table tr td:last-child {
+    border-right: 0;
+}
+
+.shape {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    left: 26px;
+    top: 26px;
+}
+
+.d-none {
+    display: none;
+}
+
+.horizontal-line {
+    height: 10px;
+    width: 355px;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    transform: scaleX(0.0);
+    transition: transform 225ms ease-in-out;
+    z-index: 1;
+}
+
+.make-vertical {
+    transform: rotate(90deg) scaleX(0.0);
+    top: 360px;
+}
+
+.game-over {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    width: 70%;
+    left: 200px;
+    top: 100px;
+    animation: zoomIn 225ms ease-in-out;
+}
+
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        transform: scale(0);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.restart-btn {
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    background-color: #1C0B7F;
+    z-index: 2;
+    width: 300px;
+    height: 100px;
+    color: white;
+    font-size: 40px;
+    cursor: pointer;
+    position: absolute;
+    bottom: -200px;
+}
+
+.restart-btn:hover {
+    background-color: #402abe;
+}
+
+.player1_winner {
+    font-size: 30px;
+    position: absolute;
+    bottom: -80px;
+    color: #402abe;
+}
+
+.player2_winner {
+    font-size: 30px;
+    position: absolute;
+    bottom: -80px;
+    color: rgb(219, 219, 57);
+}
+
+.score {
+    position: absolute;
+    bottom: -450px;
+    font-size: 30px;
+}
+
+.score_player1 {
+    font-size: 25px;
+    display: flex;
+    padding-top: 40px;
+}
+
+.score_player2 {
+    font-size: 25px;
+    display: flex;
+}
+
+.number1 {
+    position: relative;
+    bottom: 24px;
+    padding-left: 20px;
+}
+
+.number2 {
+    position: relative;
+    bottom: 24px;
+    padding-left: 20px;
+}
+
+.not_won{
+    font-size: 25px;
+
+    position: absolute;
+    bottom: -80px;
+}
