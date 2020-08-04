@@ -178,7 +178,7 @@ function checkForWin(){
 
 function undecided() {
 
-    if (fields[0] && fields[1] && fields[2] && fields[3] && fields[4] && fields[5] && fields[6] && fields[7] && fields[8] && !checkForWin) {
+    if (fields[0] && fields[1] && fields[2] && fields[3] && fields[4] && fields[5] && fields[6] && fields[7] && fields[8] && checkForWin() == false ){
 
         gameOver = true;
         setTimeout(() => {
@@ -186,6 +186,8 @@ function undecided() {
             document.getElementById('not_won').classList.remove('d-none');
             document.getElementById('score').classList.remove('d-none');
             document.getElementById('restart-btn').classList.remove('d-none');
+            document.getElementById('player1_winner').classList.add('d-none');
+            document.getElementById('player2_winner').classList.add('d-none');
             
         }, 1000);
 
